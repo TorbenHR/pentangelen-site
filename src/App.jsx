@@ -877,7 +877,7 @@ export default function PentangelenSiteMock() {
         <div className="mx-auto max-w-5xl px-4 py-10">
           <Card className="p-6">
             <h2 className="text-xl font-serif font-semibold text-zinc-100">Forfatterside kommer</h2>
-            <p className="text-zinc-400">(placeholder)</p>
+            <p className="text-zinc-400">Jeg pendler mellom kontorlys og skygger. På dagtid er jeg statsansatt småbarnsfar; på kvelden går jeg Tønsberg rundt og leter etter sprekker. I Pentangelen åpner bomringen seg. Belsebubs Bomring skrur til ritualene og lar teknologien hviske. Taumageddon lar gjengen møte konsekvensene. Jeg skriver økonomisk, dialog først, atmosfære tett, og lar humoren skurre som en radio i et kjellerrom. Målet mitt er at det overnaturlige skal føles som en liten, plausibel forskyvning av hverdagen.</p>
           </Card>
         </div>
       )}
