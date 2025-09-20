@@ -620,14 +620,50 @@ function AboutPage() {
 }
 
 function ContactPage() {
+  const ENDPOINT_URL = "https://formspree.io/f/meolyppd"; // <- ditt endpoint
+  const [status, setStatus] = useState("idle"); // idle|sending|ok|err
+  const [form, setForm] = useState({ name: "", email: "", message: "", consent: false });
+
+  async function onSubmit(e) {
+    e.preventDefault();
+    if (!form.email || !form.message || !form.consent) {
+      setStatus("err");
+      return;
+    }
+    try {
+      setStatus("sending");
+      const res = await fetch(ENDPOINT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: "Ny melding fra pentangelen-site",
+        }),
+      });
+      if (res.ok) {
+        setStatus("ok");
+        setForm({ name: "", email: "", message: "", consent: false });
+      } else {
+        setStatus("err");
+      }
+    } catch {
+      setStatus("err");
+    }
+  }
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <h2 className="mb-4 text-3xl font-bold text-zinc-100">Kontakt</h2>
       <Card className="p-6">
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={onSubmit}>
           <div>
             <label className="mb-1 block text-sm text-zinc-300">Navn</label>
             <input
+              name="name"
+              value={form.name}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
               className="w-full rounded-xl border border-zinc-700 bg-zinc-900/60 px-3 py-2 text-zinc-100 outline-none focus:ring-2 focus:ring-fuchsia-600"
               placeholder="Ditt navn"
             />
@@ -635,27 +671,62 @@ function ContactPage() {
           <div>
             <label className="mb-1 block text-sm text-zinc-300">E-post</label>
             <input
+              name="email"
+              type="email"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full rounded-xl border border-zinc-700 bg-zinc-900/60 px-3 py-2 text-zinc-100 outline-none focus:ring-2 focus:ring-fuchsia-600"
               placeholder="din@epost.no"
+              required
             />
           </div>
           <div>
             <label className="mb-1 block text-sm text-zinc-300">Melding</label>
             <textarea
+              name="message"
               rows={5}
+              value={form.message}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
               className="w-full rounded-xl border border-zinc-700 bg-zinc-900/60 px-3 py-2 text-zinc-100 outline-none focus:ring-2 focus:ring-fuchsia-600"
               placeholder="Hei!"
+              required
             />
           </div>
-          <div className="flex gap-3">
-            <Button type="button">Send melding</Button>
-            <GhostButton type="button">Forlagskontakt</GhostButton>
+
+          {/* Samtykke (GDPR) */}
+          <label className="flex items-start gap-2 text-xs text-zinc-400">
+            <input
+              type="checkbox"
+              checked={form.consent}
+              onChange={(e) => setForm({ ...form, consent: e.target.checked })}
+              className="mt-0.5"
+            />
+            Jeg samtykker til at denne meldingen sendes til Torben (Formspree). Jeg kan be om sletting.
+          </label>
+
+          <div className="flex gap-3 pt-1">
+            <Button type="submit" disabled={status === "sending"}>
+              {status === "sending" ? "Sender…" : "Send melding"}
+            </Button>
+            <GhostButton type="button" as="a" href="mailto:torben.rygg@gmail.com">
+              Forlagskontakt
+            </GhostButton>
           </div>
+
+          {status === "ok" && (
+            <div className="text-sm text-emerald-400">Takk! Meldingen er sendt.</div>
+          )}
+          {status === "err" && (
+            <div className="text-sm text-rose-400">
+              Noe gikk galt. Sjekk feltene og prøv igjen (eller send e-post direkte).
+            </div>
+          )}
         </form>
       </Card>
     </div>
   );
 }
+
 
 // ---------- Newsletter (mock) ----------
 const EMAIL_RE = new RegExp('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$');
