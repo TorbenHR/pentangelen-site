@@ -338,15 +338,25 @@ function Nav({ route, setRoute, setSelectedBook, theme, setTheme }) {
             </button>
             <Badge>Mørk &bull; Okkult &bull; Humor</Badge>
           </div>
-          {/* Navigation buttons below header, always visible, smaller size */}
-          <div className="flex flex-wrap gap-1 sm:gap-2">
-            <button className={`group inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs sm:text-sm ${route === PAGES.HOME ? "bg-zinc-800 text-white" : "text-zinc-300 hover:text-white hover:bg-zinc-800/60"}`} onClick={() => { setSelectedBook(null); setRoute(PAGES.HOME); window.scrollTo({ top: 0, behavior: "smooth" }); }}><Home size={14} className="opacity-90" />Hjem</button>
-            <button className={`group inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs sm:text-sm ${route === PAGES.BOOKS ? "bg-zinc-800 text-white" : "text-zinc-300 hover:text-white hover:bg-zinc-800/60"}`} onClick={() => { setSelectedBook(null); setRoute(PAGES.BOOKS); window.scrollTo({ top: 0, behavior: "smooth" }); }}><Library size={14} className="opacity-90" />Bøker</button>
-            <button className={`group inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs sm:text-sm ${route === PAGES.LORE ? "bg-zinc-800 text-white" : "text-zinc-300 hover:text-white hover:bg-zinc-800/60"}`} onClick={() => { setSelectedBook(null); setRoute(PAGES.LORE); window.scrollTo({ top: 0, behavior: "smooth" }); }}><Scroll size={14} className="opacity-90" />Lore</button>
-            <button className={`group inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs sm:text-sm ${route === PAGES.NEWS ? "bg-zinc-800 text-white" : "text-zinc-300 hover:text-white hover:bg-zinc-800/60"}`} onClick={() => { setSelectedBook(null); setRoute(PAGES.NEWS); window.scrollTo({ top: 0, behavior: "smooth" }); }}><BookOpen size={14} className="opacity-90" />Nyheter</button>
-            <button className={`group inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs sm:text-sm ${route === PAGES.ABOUT ? "bg-zinc-800 text-white" : "text-zinc-300 hover:text-white hover:bg-zinc-800/60"}`} onClick={() => { setSelectedBook(null); setRoute(PAGES.ABOUT); window.scrollTo({ top: 0, behavior: "smooth" }); }}><Info size={14} className="opacity-90" />Om</button>
-            <button className={`group inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs sm:text-sm ${route === PAGES.CONTACT ? "bg-zinc-800 text-white" : "text-zinc-300 hover:text-white hover:bg-zinc-800/60"}`} onClick={() => { setSelectedBook(null); setRoute(PAGES.CONTACT); window.scrollTo({ top: 0, behavior: "smooth" }); }}><Mail size={14} className="opacity-90" />Kontakt</button>
-            <button className={`group inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs sm:text-sm ${route === PAGES.AUTHOR ? "bg-zinc-800 text-white" : "text-zinc-300 hover:text-white hover:bg-zinc-800/60"}`} onClick={() => { setSelectedBook(null); setRoute(PAGES.AUTHOR); window.scrollTo({ top: 0, behavior: "smooth" }); }}><User size={14} className="opacity-90" />Forfatter</button>
+          {/* Always show burger menu for navigation */}
+          <div className="w-full flex justify-end">
+            <button
+              className="inline-flex items-center justify-center rounded-xl p-2 text-zinc-100 hover:bg-zinc-800"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Åpne meny"
+            >
+              <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="6" width="18" height="2" rx="1"/><rect x="3" y="12" width="18" height="2" rx="1"/><rect x="3" y="18" width="18" height="2" rx="1"/></svg>
+            </button>
+            {menuOpen && (
+              <div className="absolute right-2 top-16 w-48 rounded-2xl bg-zinc-900/95 shadow-xl border border-zinc-800 flex flex-col py-2 z-50">
+                <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.BOOKS); setMenuOpen(false); }}>Bøker</button>
+                <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.LORE); setMenuOpen(false); }}>Lore</button>
+                <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.NEWS); setMenuOpen(false); }}>Nyheter</button>
+                <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.ABOUT); setMenuOpen(false); }}>Om</button>
+                <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.CONTACT); setMenuOpen(false); }}>Kontakt</button>
+                <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.AUTHOR); setMenuOpen(false); }}>Forfatter</button>
+              </div>
+            )}
           </div>
         </div>
       </div>
