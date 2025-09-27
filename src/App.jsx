@@ -380,11 +380,10 @@ function Hero({ setRoute }) {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-16 md:grid-cols-2">
         <div className="space-y-6">
           <h1 className="text-4xl font-serif font-bold leading-tight text-zinc-100 md:text-6xl">
-            Humor. Okkultisme. Vestfold.
+            Okkultisme. Humor. Horror.
           </h1>
           <p className="max-w-prose text-lg text-zinc-300">
-            Et bokunivers der kollektivkøer blir ritualer, kolonihager skjuler purgatorier, og
-            vennskap settes på prøve av noe som banker på fra den andre siden.
+            Et bokunivers der purgatorier skjuler seg i kolonihager, der veldedighetsforeningene er sekter  og vennskap settes på prøve av noe som banker på fra den andre siden.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button onClick={() => setRoute(PAGES.BOOKS)}>
