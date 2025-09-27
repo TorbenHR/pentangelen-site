@@ -318,8 +318,8 @@ function Nav({ route, setRoute, setSelectedBook, theme, setTheme }) {
   );
 
   return (
-    <div className="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-[rgba(12,12,14,0.7)] backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+    <div className="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-[rgba(12,12,14,0.7)] backdrop-blur-xl overflow-x-hidden">
+      <div className="mx-auto flex w-full max-w-full items-center justify-between px-2 sm:px-4 py-3">
         <div className="flex items-center gap-3">
           <div className="relative">
             <OccultSigil className="h-8 w-8 text-zinc-500" />
