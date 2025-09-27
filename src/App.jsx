@@ -224,7 +224,7 @@ const BOOKS = [
     tags: ["okkult", "horror", "humor", "Vestfold"],
     gradient: "from-indigo-700/50 via-fuchsia-700/40 to-rose-700/40",
     blurb:
-      "I Tønsberg drømmer den retningsløse 19-åringen Bendik om å bli okkult eventyrer. Første oppdrag kommer brått da han og vennene snubler over en fylkesomfattende konspirasjon som involverer en udødelig nazist, en magiker med tvilsomme kjendiskontakter, og et eldgammelt ritual som ser ut til å drives av dårlig gatekjøkkenmat. Nå må de redde Vestfold fra å bli helvetes forgård.",
+      "Bendik har en plan for livet: å bli okkult eventyrer. Problemet er at det ikke finnes en skole for sånt, og det mest mystiske som skjer i Tønsberg er at det er noen som har agurkmiks på bensinstasjonspølsa. Men alt endrer seg den dagen han og kompisen Robban prøver å hjelpe en eksentrisk magiker som kan ha satt fyr på en leilighet. Plutselig er de Norges mest ukvalifiserte men dyktige etterforskere, jaktet av en udødelig nazisekt og skapninger som har krøpet ut av lokalhistorien. Pentangelen er en mørk, blodig og hysterisk morsom reise inn i Vestfolds hemmelige underverden, der den største trusselen kanskje ikke er glemte guder eller zombie-nazister, men dine egne dårlige ideer.",
     details: [
       { icon: MapPin, label: "Sted", value: "Tønsbergs mørke side" },
       { icon: Ghost, label: "Antagonist", value: "En 105 år gammel nasist og inkarnat" },
@@ -798,17 +798,15 @@ function Footer() {
           &copy; {new Date().getFullYear()} Pentangelen-universet &bull; En mørk, morsom, norsk bokserie
         </div>
         <div className="flex items-center gap-3 text-sm text-zinc-500">
-          <a className="hover:text-zinc-300" href="#">
-            Personvern
-          </a>
+          <a className="hover:text-zinc-300" href="#">Personvern</a>
           <span>&bull;</span>
-          <a className="hover:text-zinc-300" href="#">
-            Informasjonskapsler
-          </a>
+          <a className="hover:text-zinc-300" href="#">Informasjonskapsler</a>
           <span>&bull;</span>
-          <button className="hover:text-zinc-300 underline" onClick={() => setShowAIPopup(true)}>
-            Bruk av KI
-          </button>
+          <button className="hover:text-zinc-300 underline" onClick={() => setShowAIPopup(true)}>Bruk av KI</button>
+          <span>&bull;</span>
+          <a className="hover:text-blue-400" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a className="hover:text-pink-400" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a className="hover:text-orange-400" href="https://reddit.com" target="_blank" rel="noopener noreferrer">Reddit</a>
         </div>
       </div>
       {showAIPopup && (
