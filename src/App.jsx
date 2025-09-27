@@ -384,7 +384,7 @@ function Hero({ setRoute }) {
             Okkultisme. Humor. Horror.
           </h1>
           <p className="max-w-prose text-lg text-zinc-300">
-            Et bokunivers der purgatorier skjuler seg i kolonihager, der veldedighetsforeningene er sekter  og vennskap settes på prøve av noe som banker på fra den andre siden.
+            Et bokunivers der purgatorier skjuler seg i kolonihager, der veldedighetsforeningene er sekter  og vennskap settes på prøve av noe som vil inn fra den andre siden.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button onClick={() => setRoute(PAGES.BOOKS)}>
@@ -790,6 +790,7 @@ function NewsletterSignup() {
 }
 
 function Footer() {
+  const [showAIPopup, setShowAIPopup] = React.useState(false);
   return (
     <footer className="mt-16 border-t border-zinc-800/80 bg-zinc-950/60 py-8">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 md:flex-row">
@@ -804,8 +805,28 @@ function Footer() {
           <a className="hover:text-zinc-300" href="#">
             Informasjonskapsler
           </a>
+          <span>&bull;</span>
+          <button className="hover:text-zinc-300 underline" onClick={() => setShowAIPopup(true)}>
+            Bruk av KI
+          </button>
         </div>
       </div>
+      {showAIPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="bg-zinc-900 border border-zinc-700 rounded-2xl shadow-xl p-6 text-center max-w-xs">
+            <p className="text-zinc-100 mb-4">
+              KI er IKKE brukt til å generere tekst til bøkene.<br />
+              KI er brukt til å generere kode til nettsiden, til å lage medier på nettsiden.
+            </p>
+            <button
+              className="px-4 py-2 rounded-xl bg-zinc-800 text-zinc-100 hover:bg-zinc-700 border border-zinc-700"
+              onClick={() => setShowAIPopup(false)}
+            >
+              Lukk
+            </button>
+          </div>
+        </div>
+      )}
     </footer>
   );
 }
