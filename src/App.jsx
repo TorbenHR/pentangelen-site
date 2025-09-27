@@ -530,19 +530,34 @@ function BookDetail({ book, setRoute }) {
 function LorePage() {
   const entries = [
     {
+      title: "Taumaturgen på Teie",
+      body:
+        "En briljant, men sosialt klønete, magiker som kan bøye tid og rom, men som fortsatt sliter med å forstå konseptet \"parkeringsavgift\".",
+    },
+    {
       title: "Nahemoth",
       body:
-        "Korrumpert jord-arkana. Portåpnere, tidsirup og materiens knepp. En fot i vår verden, en i purgatoriet.",
+        "En eldgammel, sulten guddom fra den andre siden av virkeligheten, hvis nærvær gjør at ting forvitrer og maten smaker litt verre.",
     },
     {
-      title: "Bomringen",
+      title: "Gnostisisme",
       body:
-        "Sirkelgeometri med moderne tributtsystem. Køer kan fokuseres til kraftverdi - men alt krever en pris.",
+        "Den radikale ideen om at vår virkelighet er et slags kosmisk fengsel, og at den eneste veien ut er gjennom hemmelig kunnskap og en sunn dose mistenksomhet.",
     },
-    {
-      title: "Astaroth",
+     {
+      title: "Qliphoth",
       body:
-        "En klovneskygge i randsonen. Ikke helt her, ikke helt der. En ånd som klyper hull i bykartet.",
+        "De mørke, kaotiske og generelt ubehagelige skyggesidene av universet, beskrevet av mystikere som foretrakk sine metaforer dystre og vanskelige å stave.",
+    },
+     {
+      title: "Sofia / Sophia",
+      body:
+        "En guddommelig kraft av visdom som, i et øyeblikks ubetenksomhet, snublet og ved et uhell skapte hele vår uperfekte verden.",
+    },
+     {
+      title: "Agurkmiks",
+      body:
+        "En grønn, vederstyggelig substans som muligens er et biologisk våpen lekket fra en mindre edel del av en demonisk skapning.",
     },
   ];
 
@@ -607,10 +622,10 @@ function AboutPage() {
       <h2 className="mb-4 text-3xl font-bold text-zinc-100">Om universet</h2>
       <Card className="p-6">
         <p className="text-zinc-300">
-          Dette er en mockup av en forfatterside for et humor/okkult skrekkunivers satt til Vestfold.
-          Tonen er leken, mørk og litt rampete. Her kan forlag og lesere få oversikt over bøker,
-          lese smakebiter og dykke i lore. Distribusjon håndteres av BoD (Books on Demand), som gjør
-          bøkene lett tilgjengelig hos flere forhandlere - både trykk og e-bok.
+          <p>Det finnes kanskje et kart over Norge som du ikke finner i noe atlas. Et kart der de gamle veiene i Vestfold ikke bare leder til hyggelige kystbyer, men til glemte ritualer og portaler til andre dimensj- nei, <i>lag</i>, til andre lag av vår verden. Der kornsirklene på et jorde i Høyjord ikke er laget av lystige studenter, men er beskjeder fra den andre siden. Og der bomringene på E-18 ikke bare krever penger, men små biter av sjelen din som offer til en eldgammel, sulten guddom.</p>
+          <p>Dette er verdenen til Pentangel-trilogien.</p><br />
+          <p>Bli med Bendik, en aspirerende okkult eventyrer hvis entusiasme langt overgår hans kompetanse; Robban, hans jordnære snekker-kompis som helst skulle ønske han var et annet sted; og Emma, en uforutsigbar rebell med et talent for å skape kaos. Sammen med den eksentriske og plagede taumaturgen Torleif, snubler de inn i en virkelighet som er mørkere, dummere og uendelig mye mer komplisert enn de noensinne kunne ha forestilt seg.</p>
+          <p>Gjennom tre bøker – <strong>Pentangelen</strong>, <strong>Tempusterror</strong> og <strong>Taumageddon</strong> – følger vi denne brokete alliansen fra deres første, klønete kamp mot en udødelige nazister, til en desperat konfrontasjon med kosmiske mareritt, eldgamle pakter, og den mest skremmende trusselen av alle: sorgen og sviket fra en venn.</p><br />
         </p>
       </Card>
     </div>
@@ -813,8 +828,9 @@ function Footer() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
           <div className="bg-zinc-900 border border-zinc-700 rounded-2xl shadow-xl p-6 text-center max-w-xs">
             <p className="text-zinc-100 mb-4">
-              KI er IKKE brukt til å generere tekst til bøkene.<br />
-              KI er brukt til å generere kode til nettsiden, til å lage medier på nettsiden.
+              KI er IKKE brukt til å generere tekst til bøkene.<br /><br />
+              KI er brukt til å generere kode til nettsiden, til å lage medier på nettsiden og sammenfatte tektst til nettsiden.<br /><br />
+              Svart og lysebrun magi er bruk til det hele. 
             </p>
             <button
               className="px-4 py-2 rounded-xl bg-zinc-800 text-zinc-100 hover:bg-zinc-700 border border-zinc-700"
