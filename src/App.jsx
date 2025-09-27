@@ -224,11 +224,11 @@ const BOOKS = [
     tags: ["okkult", "horror", "humor", "Vestfold"],
     gradient: "from-indigo-700/50 via-fuchsia-700/40 to-rose-700/40",
     blurb:
-      "Fire venner og en taumaturg forsøker å stenge Nahemoth ute av Tønsberg. Kolonihager som tidsirup, biskop med velsignet Glock, og et rituale som kanskje krever... deg.",
+      "I Tønsberg drømmer den retningsløse 19-åringen Bendik om å bli okkult eventyrer. Første oppdrag kommer brått da han og vennene snubler over en fylkesomfattende konspirasjon som involverer en udødelig nazist, en magiker med tvilsomme kjendiskontakter, og et eldgammelt ritual som ser ut til å drives av dårlig gatekjøkkenmat. Nå må de redde Vestfold fra å bli helvetes forgård.",
     details: [
-      { icon: MapPin, label: "Sted", value: "Tønsberg & Omegn" },
-      { icon: Ghost, label: "Antagonist", value: "Nahemoths inkarnasjon" },
-      { icon: Shield, label: "Tema", value: "Skyld, vennskap, offer" },
+      { icon: MapPin, label: "Sted", value: "Tønsbergs mørke side" },
+      { icon: Ghost, label: "Antagonist", value: "En 105 år gammel nasist og inkarnat" },
+      { icon: Shield, label: "Tema", value: "Skyld, vennskap, offer, agurkmi" },
     ],
     author: "Torben Halvorsen Rygg",
   },
@@ -244,7 +244,7 @@ const BOOKS = [
     details: [
       { icon: MapPin, label: "Sted", value: "Tønsberg / Omegn" },
       { icon: Timer, label: "Motiv", value: "Kø-ritualer & skjulte kostnader" },
-      { icon: Wand2, label: "Tråd", value: "Forræderi & fri vilje" },
+      { icon: Wand2, label: "Tema", value: "En eldgammel pakt, et knust hjerte, og en sorg som er mektigere enn noen demon." },
     ],
     author: "Torben Halvorsen Rygg",
   },
@@ -331,7 +331,7 @@ function Nav({ route, setRoute, setSelectedBook, theme, setTheme }) {
           >
             Pentangelen-universet
           </button>
-          <Badge>Dark &bull; Occult &bull; Humor</Badge>
+          <Badge>Mørk &bull; Okkult &bull; Humor</Badge>
         </div>
         <div className="flex items-center gap-2">
           <Link to={PAGES.HOME} icon={Home}>
