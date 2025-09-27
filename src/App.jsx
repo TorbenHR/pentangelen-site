@@ -233,16 +233,16 @@ const BOOKS = [
     author: "Torben Halvorsen Rygg",
   },
   {
-    id: "belsebubs-bomring",
-    title: "Belsebubs Bomring",
+    id: "tempusterror",
+    title: "Tempusterror",
     subtitle: "Når trafikken blir en sirkel av makt",
-    status: "Under arbeid (Bok 2)",
+    status: "I redigering (Bok 2)",
     tags: ["okkult", "horror", "humor", "bomring"],
     gradient: "from-amber-700/40 via-red-700/30 to-rose-700/30",
     blurb:
       "Bomringen som magisk sirkel, kø som offerstrøm. Torleif jakter gnostisk oppvåkning - men hvem betaler prisen?",
     details: [
-      { icon: MapPin, label: "Sted", value: "Tønsberg / Omegn" },
+      { icon: MapPin, label: "Sted", value: "Tønsbergs hovedpulsåre" },
       { icon: Timer, label: "Motiv", value: "Kø-ritualer & skjulte kostnader" },
       { icon: Wand2, label: "Tema", value: "En eldgammel pakt, et knust hjerte, og en sorg som er mektigere enn noen demon." },
     ],
@@ -252,15 +252,15 @@ const BOOKS = [
     id: "taumageddon",
     title: "Taumageddon",
     subtitle: "Det store oppgjøret",
-    status: "Planlagt (Bok 3)",
+    status: "Under arbeid (Bok 3)",
     tags: ["okkult", "kosmisk", "oppgjør"],
     gradient: "from-sky-700/40 via-violet-700/30 to-fuchsia-700/30",
     blurb:
-      "Mysteriegjengen mot Torleif. Tidsreiser, faste løkker og en siste sjanse før alt går i svart.",
+      "Bendiks reise fra en bekymringsløs ungdom til en okkult eventyrer har kostet ham alt. Nå, med vennskapet i ruiner og selve virkeligheten i ferd med å kollapse, står han overfor sitt siste valg. Han må samle restene av teamet sitt for en siste, desperat kamp, ikke bare mot monstre fra en annen dimensjon, men mot selve ideen om skjebne. Det blir en siste konfrontasjon der den største seieren ikke er å redde verden, men å redde sjelen til en venn.",
     details: [
-      { icon: MapPin, label: "Sted", value: "Vestfold (flere lokasjoner)" },
+      { icon: MapPin, label: "Sted", value: "Vestfold og Jerusalem" },
       { icon: Ghost, label: "Trussel", value: "Astaroth i randsonen" },
-      { icon: Shield, label: "Tema", value: "Skjebne vs. valg" },
+      { icon: Shield, label: "Tema", value: "Skjebne vs. fri vilje" },
     ],
     author: "Torben Halvorsen Rygg",
   },
@@ -873,8 +873,14 @@ export default function PentangelenSiteMock() {
       {route === PAGES.AUTHOR && (
         <div className="mx-auto max-w-5xl px-4 py-10">
           <Card className="p-6">
-            <h2 className="text-xl font-serif font-semibold text-zinc-100">Forfatterside kommer</h2>
-            <p className="text-zinc-400">Jeg pendler mellom kontorlys og skygger. På dagtid er jeg statsansatt småbarnsfar; på kvelden går jeg Tønsberg rundt og leter etter sprekker. I Pentangelen åpner bomringen seg. Belsebubs Bomring skrur til ritualene og lar teknologien hviske. Taumageddon lar gjengen møte konsekvensene. Jeg skriver økonomisk, dialog først, atmosfære tett, og lar humoren skurre som en radio i et kjellerrom. Målet mitt er at det overnaturlige skal føles som en liten, plausibel forskyvning av hverdagen.</p>
+            <h2 className="text-xl font-serif font-semibold text-zinc-100">Torben Halvorsen Rygg</h2>
+            <p className="text-zinc-400">Hva skjer når en fyr med et bein solid plantet i NAVs byråkratiske kalde maskineri og det andre vilt sparkende i et multivers av gnostiske tekster, dårlig teologi og Life of Brian bestemmer seg for å skrive en bok?
+              Vel, du får noe sånt som dette. <br />
+              &nbsp;&nbsp;&nbsp;Jeg heter Torben, bor i utkanten av Tønsberg, og har tilbrakt en foruroligende stor del av livet mitt med å se det absurde utfolde seg i statlige korridorer. Det er en opplevelse som lærer deg én ting: virkeligheten er ofte rarere, dummere og mer uforutsigbar enn noen fiksjon du kan finne på.
+              Så jeg bestemte meg for å ta den utfordringen.<br />
+              &nbsp;&nbsp;&nbsp;&nbsp; Bøkene mine er et resultat av den innsikten. De er en slags kjærlig, men kaotisk, frontkollisjon mellom det jeg synes er genuint fascinerende – kosmisk horror, eldgamle myter, tidsparadokser – og det som er genuint tønsbergensisk: debatter om hvorvidt agurkmiks er en forbrytelse mot menneskeheten, mysteriet med bomringer, og den dypt rotfestede troen på byens helter kan redde verden.
+              Forvent raske dialoger, mysterier som er smartere enn de kanskje burde være, og en konstant påminnelse om at selv når himmelen revner og glemte guder kommer gjennom illusjonen, er det sannsynligvis noen i nærheten som er mer opptatt av om lompe egentlig er bedre enn pølsebrød.
+              Det er i hvert fall noe av det jeg prøver på. Håper du elsker det.</p>
           </Card>
         </div>
       )}
