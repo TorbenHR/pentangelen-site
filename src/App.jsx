@@ -323,7 +323,7 @@ function Nav({ route, setRoute, setSelectedBook, theme, setTheme }) {
   }, []);
 
   return (
-      <div className="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-[rgba(12,12,14,0.7)] backdrop-blur-xl overflow-x-hidden">
+  <div className="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-[rgba(12,12,14,0.7)] backdrop-blur-xl overflow-x-visible">
         <div className="mx-auto w-full max-w-full px-2 sm:px-4 py-3 flex flex-col items-start">
           <div className="flex items-center gap-3 mb-2">
             <div className="relative">
@@ -348,7 +348,7 @@ function Nav({ route, setRoute, setSelectedBook, theme, setTheme }) {
               <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="6" width="18" height="2" rx="1"/><rect x="3" y="12" width="18" height="2" rx="1"/><rect x="3" y="18" width="18" height="2" rx="1"/></svg>
             </button>
             {menuOpen && (
-              <div className="fixed right-4 top-20 w-56 rounded-2xl bg-zinc-900/95 shadow-xl border border-zinc-800 flex flex-col py-2 z-50">
+              <div className="fixed right-4 top-24 w-56 max-h-[calc(100vh-5rem)] overflow-y-auto rounded-2xl bg-zinc-900/95 shadow-xl border border-zinc-800 flex flex-col py-2 z-50">
                 <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.BOOKS); setMenuOpen(false); }}>Bøker</button>
                 <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.LORE); setMenuOpen(false); }}>Lore</button>
                 <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.NEWS); setMenuOpen(false); }}>Nyheter</button>
