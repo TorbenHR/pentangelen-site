@@ -228,7 +228,7 @@ const BOOKS = [
     details: [
       { icon: MapPin, label: "Sted", value: "Tønsbergs mørke side" },
       { icon: Ghost, label: "Antagonist", value: "En 105 år gammel nasist og inkarnat" },
-      { icon: Shield, label: "Tema", value: "Skyld, vennskap, offer, agurkmi" },
+      { icon: Shield, label: "Tema", value: "Skyld, vennskap, offer, agurkmiks" },
     ],
     author: "Torben Halvorsen Rygg",
   },
@@ -237,13 +237,13 @@ const BOOKS = [
     title: "Tempusterror",
     subtitle: "Boken basert på filmen",
     status: "I redigering (Bok 2)",
-    tags: ["okkult", "horror", "humor", "bomring"],
+    tags: ["okkult", "horror", "humor", "tidsreise"],
     gradient: "from-amber-700/40 via-red-700/30 to-rose-700/30",
     blurb:
-      "Bomringen som magisk sirkel, kø som offerstrøm. Torleif jakter gnostisk oppvåkning - men hvem betaler prisen?",
+      "De reddet verden. De trodde de hadde vunnet. De tok feil. I fortsettelsen på den kritikerroste Pentangelen, oppdager Bendik og vennene hans at deres største seier bare var åpningstrekket i et mye mørkere og mer forrædersk spill. Og hva skjer når man er drevet av en sorg så dyp at man er villig til å ofre selve tidslinjen for å vinne tilbake det han har tapt.",
     details: [
       { icon: MapPin, label: "Sted", value: "Tønsbergs hovedpulsåre" },
-      { icon: Timer, label: "Motiv", value: "Kø-ritualer & skjulte kostnader" },
+      { icon: Timer, label: "Motiv", value: "Ritualer & skjulte kostnader" },
       { icon: Wand2, label: "Tema", value: "En eldgammel pakt, et knust hjerte, og en sorg som er mektigere enn noen demon." },
     ],
     author: "Torben Halvorsen Rygg",
@@ -349,6 +349,7 @@ function Nav({ route, setRoute, setSelectedBook, theme, setTheme }) {
             </button>
             {menuOpen && (
               <div className="fixed right-4 top-24 w-56 max-h-[calc(100vh-5rem)] overflow-y-auto rounded-2xl bg-zinc-900/95 shadow-xl border border-zinc-800 flex flex-col py-2 z-50">
+                <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100 font-semibold" onClick={() => { setSelectedBook(null); setRoute(PAGES.HOME); setMenuOpen(false); }}>Hjem</button>
                 <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.BOOKS); setMenuOpen(false); }}>Bøker</button>
                 <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.LORE); setMenuOpen(false); }}>Lore</button>
                 <button className="text-left px-4 py-2 hover:bg-zinc-800 text-zinc-100" onClick={() => { setRoute(PAGES.NEWS); setMenuOpen(false); }}>Nyheter</button>
@@ -874,9 +875,9 @@ export default function PentangelenSiteMock() {
         <div className="mx-auto max-w-5xl px-4 py-10">
           <Card className="p-6">
             <h2 className="text-xl font-serif font-semibold text-zinc-100">Torben Halvorsen Rygg</h2>
-            <p className="text-zinc-400">Hva skjer når en fyr med et bein solid plantet i NAVs byråkratiske kalde maskineri og det andre vilt sparkende i et multivers av gnostiske tekster, dårlig teologi og Life of Brian bestemmer seg for å skrive en bok?
+            <p className="text-zinc-400">Hva skjer når en dude med et bein solid plantet i Navs byråkratiske kalde maskineri og det andre vilt trampende i et et univers av gnostiske tekster, dårlig teologi og forkjærlighet for skrekk bestemmer seg for å skrive en bok?
               Vel, du får noe sånt som dette. <br />
-              &nbsp;&nbsp;&nbsp;Jeg heter Torben, bor i utkanten av Tønsberg, og har tilbrakt en foruroligende stor del av livet mitt med å se det absurde utfolde seg i statlige korridorer. Det er en opplevelse som lærer deg én ting: virkeligheten er ofte rarere, dummere og mer uforutsigbar enn noen fiksjon du kan finne på.
+              &nbsp;&nbsp;&nbsp;Jeg heter Torben, bor i utkanten av Tønsberg, og har tilbrakt en foruroligende stor del av livet mitt med å se det absurde utfolde seg i statlige korridorer. Folk sier virkeligheten er ofte rarere, dummere og mer uforutsigbar enn noen fiksjon du kan finne på.
               Så jeg bestemte meg for å ta den utfordringen.<br />
               &nbsp;&nbsp;&nbsp;&nbsp; Bøkene mine er et resultat av den innsikten. De er en slags kjærlig, men kaotisk, frontkollisjon mellom det jeg synes er genuint fascinerende – kosmisk horror, eldgamle myter, tidsparadokser – og det som er genuint tønsbergensisk: debatter om hvorvidt agurkmiks er en forbrytelse mot menneskeheten, mysteriet med bomringer, og den dypt rotfestede troen på byens helter kan redde verden.
               Forvent raske dialoger, mysterier som er smartere enn de kanskje burde være, og en konstant påminnelse om at selv når himmelen revner og glemte guder kommer gjennom illusjonen, er det sannsynligvis noen i nærheten som er mer opptatt av om lompe egentlig er bedre enn pølsebrød.
