@@ -235,7 +235,7 @@ const BOOKS = [
   {
     id: "tempusterror",
     title: "Tempusterror",
-    subtitle: "Når trafikken blir en sirkel av makt",
+    subtitle: "Boken basert på filmen",
     status: "I redigering (Bok 2)",
     tags: ["okkult", "horror", "humor", "bomring"],
     gradient: "from-amber-700/40 via-red-700/30 to-rose-700/30",
@@ -259,7 +259,7 @@ const BOOKS = [
       "Bendiks reise fra en bekymringsløs ungdom til en okkult eventyrer har kostet ham alt. Nå, med vennskapet i ruiner og selve virkeligheten i ferd med å kollapse, står han overfor sitt siste valg. Han må samle restene av teamet sitt for en siste, desperat kamp, ikke bare mot monstre fra en annen dimensjon, men mot selve ideen om skjebne. Det blir en siste konfrontasjon der den største seieren ikke er å redde verden, men å redde sjelen til en venn.",
     details: [
       { icon: MapPin, label: "Sted", value: "Vestfold og Jerusalem" },
-      { icon: Ghost, label: "Trussel", value: "Astaroth i randsonen" },
+      { icon: Ghost, label: "Trussel", value: "En gudefar med kjøleboks" },
       { icon: Shield, label: "Tema", value: "Skjebne vs. fri vilje" },
     ],
     author: "Torben Halvorsen Rygg",
@@ -324,8 +324,8 @@ function Nav({ route, setRoute, setSelectedBook, theme, setTheme }) {
 
   return (
   <div className="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-[rgba(12,12,14,0.7)] backdrop-blur-xl overflow-x-visible">
-        <div className="mx-auto w-full max-w-full px-2 sm:px-4 py-3 flex flex-col items-start">
-          <div className="flex items-center gap-3 mb-2">
+        <div className="mx-auto w-full max-w-full px-2 sm:px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3">
             <div className="relative">
               <OccultSigil className="h-8 w-8 text-zinc-500" />
               <div className="absolute inset-0 blur-[6px] opacity-30" />
@@ -338,8 +338,8 @@ function Nav({ route, setRoute, setSelectedBook, theme, setTheme }) {
             </button>
             <Badge>Mørk &bull; Okkult &bull; Humor</Badge>
           </div>
-          {/* Always show burger menu for navigation */}
-          <div className="w-full flex justify-end">
+          {/* Burger menu button inline with title */}
+          <div className="flex items-center">
             <button
               className="inline-flex items-center justify-center rounded-xl p-2 text-zinc-100 hover:bg-zinc-800"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -793,7 +793,7 @@ function Footer() {
     <footer className="mt-16 border-t border-zinc-800/80 bg-zinc-950/60 py-8">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 md:flex-row">
         <div className="text-sm text-zinc-500">
-          &copy; {new Date().getFullYear()} Pentangelen-universet &bull; En mork, norsk bokserie
+          &copy; {new Date().getFullYear()} Pentangelen-universet &bull; En mørk, morsom, norsk bokserie
         </div>
         <div className="flex items-center gap-3 text-sm text-zinc-500">
           <a className="hover:text-zinc-300" href="#">
