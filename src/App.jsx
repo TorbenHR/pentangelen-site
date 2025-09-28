@@ -806,6 +806,7 @@ function NewsletterSignup() {
 
 function Footer() {
   const [showAIPopup, setShowAIPopup] = React.useState(false);
+  const [showPrivacyPopup, setShowPrivacyPopup] = React.useState(false);
   return (
     <footer className="mt-16 border-t border-zinc-800/80 bg-zinc-950/60 py-8">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 md:flex-row">
@@ -813,11 +814,16 @@ function Footer() {
           &copy; {new Date().getFullYear()} Pentangelen-universet &bull; En mørk, morsom, norsk bokserie
         </div>
         <div className="flex items-center gap-3 text-sm text-zinc-500">
-          <a className="hover:text-zinc-300" href="#">Personvern</a>
+          <button
+            className="hover:text-zinc-300"
+            onClick={() => setShowPrivacyPopup(true)}
+          >
+            Personvern
+          </button>
           <span>&bull;</span>
           <a className="hover:text-zinc-300" href="#">Informasjonskapsler</a>
           <span>&bull;</span>
-          <button className="hover:text-zinc-300 underline" onClick={() => setShowAIPopup(true)}>Bruk av KI</button>
+          <button className="hover:text-zinc-300" onClick={() => setShowAIPopup(true)}>KI</button>
           <span>&bull;</span>
           <a className="hover:text-blue-400" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
           <a className="hover:text-pink-400" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -830,11 +836,27 @@ function Footer() {
             <p className="text-zinc-100 mb-4">
               KI er IKKE brukt til å generere tekst til bøkene.<br /><br />
               KI er brukt til å generere kode til nettsiden, til å lage medier på nettsiden og sammenfatte tektst til nettsiden.<br /><br />
-              Svart og lysebrun magi er bruk til det hele. 
+              Svart og lysebrun magi er brukt til hele smæla. <i>In nomine Codicis, Branchi, et Pull-Requesti.</i>
             </p>
             <button
               className="px-4 py-2 rounded-xl bg-zinc-800 text-zinc-100 hover:bg-zinc-700 border border-zinc-700"
               onClick={() => setShowAIPopup(false)}
+            >
+              Lukk
+            </button>
+          </div>
+        </div>
+      )}
+      {showPrivacyPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+          <div className="bg-zinc-900 border border-zinc-700 rounded-2xl shadow-xl p-6 text-center max-w-xs">
+            <p className="text-zinc-100 mb-4">
+              Pentangelen.no sparer ikke personinformasjon.<br /><br />
+              Dersom du sender tilbakemelding i tilbakemeldingsskjema vil vi få opplysninger om epost-addressen din.
+            </p>
+            <button
+              className="px-4 py-2 rounded-xl bg-zinc-800 text-zinc-100 hover:bg-zinc-700 border border-zinc-700"
+              onClick={() => setShowPrivacyPopup(false)}
             >
               Lukk
             </button>
