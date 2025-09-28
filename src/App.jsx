@@ -103,7 +103,7 @@ const OccultSigil = ({ className = "" }) => {
         {...common}
       />
       <motion.path
-        d="M100 20 L127 170 L30 70 L170 70 L73 170 Z"
+        d="M100 20 L145 170 L30 70 L170 70 L55 170 Z"
         fill="none"
         stroke="currentColor"
         className="text-zinc-500"
