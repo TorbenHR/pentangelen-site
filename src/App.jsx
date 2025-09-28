@@ -857,7 +857,7 @@ function Footer() {
           <span>&bull;</span>
           <a
             className="inline-flex items-center justify-center rounded-xl bg-zinc-800/70 text-zinc-300 hover:bg-zinc-700 border border-zinc-700 p-2"
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=61581439384934"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
