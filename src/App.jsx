@@ -956,9 +956,10 @@ export default function PentangelenSiteMock() {
           <Card className="p-6">
             <h2 className="text-xl font-serif font-semibold text-zinc-100">Torben Halvorsen Rygg</h2>
             <p className="text-zinc-400">
-              &nbsp;&nbsp;&nbsp;Jeg heter Torben, bor i utkanten av Tønsberg, og har tilbrakt en foruroligende stor del av livet mitt med å se det absurde utfolde seg i statlige korridorer. Folk sier virkeligheten er ofte rarere, dummere og mer uforutsigbar enn noen fiksjon du kan finne på.
+              Jeg heter Torben, bor i utkanten av Tønsberg, og har tilbrakt en foruroligende stor del av livet mitt med å se det absurde utfolde seg i statlige korridorer. </p>
+              <p>Folk sier virkeligheten er ofte rarere, dummere og mer uforutsigbar enn noen fiksjon du kan finne på.
               Så jeg bestemte meg for å ta den utfordringen.<br />
-              &nbsp;&nbsp;&nbsp;&nbsp; Bøkene mine er en slags kjærlig, men kaotisk, frontkollisjon mellom det jeg synes er genuint fascinerende – kosmisk horror, eldgamle myter, tidsparadokser – og det som er genuint tønsbergensisk: debatter om hvorvidt agurkmiks er en forbrytelse mot menneskeheten, mysteriet med bomringer, og den dypt rotfestede troen på byens helter kan redde verden.
+              &nbsp;&nbsp;&nbsp;&nbsp; Bøkene mine er en slags kjærlig, men kaotisk, frontkollisjon mellom det jeg synes er genuint fascinerende – kosmisk horror, eldgamle myter, tidsparadokser – og det som er genuint tønsbergensisk: debatter om hvorvidt agurkmiks er en forbrytelse mot menneskeheten, mysteriet med bomringer, og den dypt rotfestede troen på at byens helter kan redde verden.
               Forvent raske dialoger, mysterier som er smartere enn de kanskje burde være, og en konstant påminnelse om at selv når himmelen revner og glemte guder kommer gjennom illusjonen, er det sannsynligvis noen i nærheten som er mer opptatt av om lompe egentlig er bedre enn pølsebrød.
               Det er i hvert fall noe av det jeg prøver på. Håper du elsker det.</p>
           </Card>
