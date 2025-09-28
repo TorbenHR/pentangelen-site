@@ -940,7 +940,7 @@ export default function PentangelenSiteMock() {
         <>
           <Hero setRoute={setRoute} />
           <BooksGrid setRoute={setRoute} setSelectedBook={setSelectedBook} />
-          <NewsletterSignup />
+          {/* <NewsletterSignup /> */}
         </>
       )}
 
