@@ -230,7 +230,7 @@ const BOOKS = [
     ],
     details: [
       { icon: MapPin, label: "Sted", value: "Tønsbergs mørke side" },
-      { icon: Ghost, label: "Antagonist", value: "En 105 år gammel nasist og inkarnat" },
+      { icon: Ghost, label: "Antagonist", value: "En 105 år gammel nazist og inkarnat" },
       { icon: Shield, label: "Tema", value: "Skyld, vennskap, offer, agurkmiks" },
     ],
     author: "Torben Halvorsen Rygg",
@@ -517,6 +517,18 @@ function BookDetail({ book, setRoute }) {
               <div className="text-xs text-zinc-500">
                 Lagerstatus, levering og angrerett håndteres av forhandler.
               </div>
+              {book.quotes && book.quotes.length > 0 && (
+                <div className="space-y-2 pt-2">
+                  {book.quotes.map((q, i) => (
+                    <blockquote
+                      key={i}
+                      className="border-l-4 border-fuchsia-600 pl-4 italic text-zinc-300 text-sm"
+                    >
+                      “{q.text}”
+                    </blockquote>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
