@@ -1,3 +1,4 @@
+import { Facebook, Instagram, Reddit } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -821,13 +822,35 @@ function Footer() {
             Personvern
           </button>
           <span>&bull;</span>
-          <a className="hover:text-zinc-300" href="#">Informasjonskapsler</a>
-          <span>&bull;</span>
           <button className="hover:text-zinc-300" onClick={() => setShowAIPopup(true)}>KI</button>
           <span>&bull;</span>
-          <a className="hover:text-blue-400" href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a className="hover:text-pink-400" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a className="hover:text-orange-400" href="https://reddit.com" target="_blank" rel="noopener noreferrer">Reddit</a>
+          <a
+            className="inline-flex items-center justify-center rounded-xl bg-zinc-800/70 text-zinc-300 hover:bg-zinc-700 border border-zinc-700 p-2"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <Facebook size={20} />
+          </a>
+          <a
+            className="inline-flex items-center justify-center rounded-xl bg-zinc-800/70 text-zinc-300 hover:bg-zinc-700 border border-zinc-700 p-2"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <Instagram size={20} />
+          </a>
+          <a
+            className="inline-flex items-center justify-center rounded-xl bg-zinc-800/70 text-zinc-300 hover:bg-zinc-700 border border-zinc-700 p-2"
+            href="https://reddit.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Reddit"
+          >
+            <Reddit size={20} />
+          </a>
         </div>
       </div>
       {showAIPopup && (
@@ -932,11 +955,10 @@ export default function PentangelenSiteMock() {
         <div className="mx-auto max-w-5xl px-4 py-10">
           <Card className="p-6">
             <h2 className="text-xl font-serif font-semibold text-zinc-100">Torben Halvorsen Rygg</h2>
-            <p className="text-zinc-400">Hva skjer når en dude med et bein solid plantet i Navs byråkratiske kalde maskineri og det andre vilt trampende i et et univers av gnostiske tekster, dårlig teologi og forkjærlighet for skrekk bestemmer seg for å skrive en bok?
-              Vel, du får noe sånt som dette. <br />
+            <p className="text-zinc-400">
               &nbsp;&nbsp;&nbsp;Jeg heter Torben, bor i utkanten av Tønsberg, og har tilbrakt en foruroligende stor del av livet mitt med å se det absurde utfolde seg i statlige korridorer. Folk sier virkeligheten er ofte rarere, dummere og mer uforutsigbar enn noen fiksjon du kan finne på.
               Så jeg bestemte meg for å ta den utfordringen.<br />
-              &nbsp;&nbsp;&nbsp;&nbsp; Bøkene mine er et resultat av den innsikten. De er en slags kjærlig, men kaotisk, frontkollisjon mellom det jeg synes er genuint fascinerende – kosmisk horror, eldgamle myter, tidsparadokser – og det som er genuint tønsbergensisk: debatter om hvorvidt agurkmiks er en forbrytelse mot menneskeheten, mysteriet med bomringer, og den dypt rotfestede troen på byens helter kan redde verden.
+              &nbsp;&nbsp;&nbsp;&nbsp; Bøkene mine er en slags kjærlig, men kaotisk, frontkollisjon mellom det jeg synes er genuint fascinerende – kosmisk horror, eldgamle myter, tidsparadokser – og det som er genuint tønsbergensisk: debatter om hvorvidt agurkmiks er en forbrytelse mot menneskeheten, mysteriet med bomringer, og den dypt rotfestede troen på byens helter kan redde verden.
               Forvent raske dialoger, mysterier som er smartere enn de kanskje burde være, og en konstant påminnelse om at selv når himmelen revner og glemte guder kommer gjennom illusjonen, er det sannsynligvis noen i nærheten som er mer opptatt av om lompe egentlig er bedre enn pølsebrød.
               Det er i hvert fall noe av det jeg prøver på. Håper du elsker det.</p>
           </Card>
