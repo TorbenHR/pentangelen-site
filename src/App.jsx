@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Reddit } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -840,15 +840,7 @@ function Footer() {
           >
             <Instagram size={20} />
           </a>
-          <a
-            className="inline-flex items-center justify-center rounded-xl bg-zinc-800/70 text-zinc-300 hover:bg-zinc-700 border border-zinc-700 p-2"
-            href="https://reddit.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Reddit"
-          >
-            <Reddit size={20} />
-          </a>
+          {/* Reddit-ikon ikke tilgjengelig i lucide-react, så den fjernes */}
         </div>
       </div>
       {showAIPopup && (
