@@ -224,6 +224,10 @@ const BOOKS = [
     gradient: "from-indigo-700/50 via-fuchsia-700/40 to-rose-700/40",
     blurb:
       "Bendik har en plan for livet: å bli okkult eventyrer. Problemet er at det ikke finnes en skole for sånt, og det mest mystiske som skjer i Tønsberg er at det er noen som har agurkmiks på bensinstasjonspølsa. Men alt endrer seg den dagen han og kompisen Robban prøver å hjelpe en eksentrisk magiker som kan ha satt fyr på en leilighet. Plutselig er de Norges mest ukvalifiserte men dyktige etterforskere, jaktet av en udødelig nazisekt og skapninger som har krøpet ut av lokalhistorien. Pentangelen er en mørk, blodig og hysterisk morsom reise inn i Vestfolds hemmelige underverden, der den største trusselen kanskje ikke er glemte guder eller zombie-nazister, men dine egne dårlige ideer.",
+    quotes: [
+      { text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. – Anmelder 1" },
+      { text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. – Anmelder 2" },
+    ],
     details: [
       { icon: MapPin, label: "Sted", value: "Tønsbergs mørke side" },
       { icon: Ghost, label: "Antagonist", value: "En 105 år gammel nasist og inkarnat" },
@@ -240,6 +244,9 @@ const BOOKS = [
     gradient: "from-amber-700/40 via-red-700/30 to-rose-700/30",
     blurb:
       "De reddet verden. De trodde de hadde vunnet. De tok feil. I fortsettelsen på den kritikerroste Pentangelen, oppdager Bendik og vennene hans at deres største seier bare var åpningstrekket i et mye mørkere og mer forrædersk spill. Og hva skjer når man er drevet av en sorg så dyp at man er villig til å ofre selve tidslinjen for å vinne tilbake det han har tapt.",
+    quotes: [
+      { text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. – Anmelder 3" },
+    ],
     details: [
       { icon: MapPin, label: "Sted", value: "Tønsbergs hovedpulsåre" },
       { icon: Timer, label: "Motiv", value: "Ritualer & skjulte kostnader" },
@@ -256,6 +263,9 @@ const BOOKS = [
     gradient: "from-sky-700/40 via-violet-700/30 to-fuchsia-700/30",
     blurb:
       "Bendiks reise fra en bekymringsløs ungdom til en okkult eventyrer har kostet ham alt. Nå, med vennskapet i ruiner og selve virkeligheten i ferd med å kollapse, står han overfor sitt siste valg. Han må samle restene av teamet sitt for en siste, desperat kamp, ikke bare mot monstre fra en annen dimensjon, men mot selve ideen om skjebne. Det blir en siste konfrontasjon der den største seieren ikke er å redde verden, men å redde sjelen til en venn.",
+    quotes: [
+      { text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. – Anmelder 4" },
+    ],
     details: [
       { icon: MapPin, label: "Sted", value: "Vestfold og Jerusalem" },
       { icon: Ghost, label: "Trussel", value: "En gudefar med kjøleboks" },
@@ -444,6 +454,18 @@ function BooksGrid({ setRoute, setSelectedBook }) {
                 ))}
               </div>
               <p className="line-clamp-3 text-zinc-300">{b.blurb}</p>
+              {b.quotes && b.quotes.length > 0 && (
+                <div className="space-y-2 pt-2">
+                  {b.quotes.map((q, i) => (
+                    <blockquote
+                      key={i}
+                      className="border-l-4 border-fuchsia-600 pl-4 italic text-zinc-300 text-sm"
+                    >
+                      “{q.text}”
+                    </blockquote>
+                  ))}
+                </div>
+              )}
               <div className="flex items-center justify-end pt-2">
                 <div className="flex gap-2">
                   <RetailerButtons title={b.title} author={b.author} compact />
