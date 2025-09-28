@@ -225,8 +225,8 @@ const BOOKS = [
     blurb:
       "Bendik har en plan for livet: å bli okkult eventyrer. Problemet er at det ikke finnes en skole for sånt, og det mest mystiske som skjer i Tønsberg er at det er noen som har agurkmiks på bensinstasjonspølsa. Men alt endrer seg den dagen han og kompisen Robban prøver å hjelpe en eksentrisk magiker som kan ha satt fyr på en leilighet. Plutselig er de Norges mest ukvalifiserte men dyktige etterforskere, jaktet av en udødelig nazisekt og skapninger som har krøpet ut av lokalhistorien. Pentangelen er en mørk, blodig og hysterisk morsom reise inn i Vestfolds hemmelige underverden, der den største trusselen kanskje ikke er glemte guder eller zombie-nazister, men dine egne dårlige ideer.",
     quotes: [
-      { text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. – Anmelder 1" },
-      { text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. – Anmelder 2" },
+      { text: "Denne boka har ingen kjedelige øyeblikk." – E.S. },
+      { text: "En herlig parodi skrudd opp til elleve." – H.E." },
     ],
     details: [
       { icon: MapPin, label: "Sted", value: "Tønsbergs mørke side" },
