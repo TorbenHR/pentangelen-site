@@ -223,7 +223,29 @@ const BOOKS = [
     tags: ["okkult", "horror", "humor", "Vestfold"],
     gradient: "from-indigo-700/50 via-fuchsia-700/40 to-rose-700/40",
     blurb:
-      "Bendik har en plan for livet: å bli okkult eventyrer. Problemet er at det ikke finnes en skole for sånt, og det mest mystiske som skjer i Tønsberg er at det er noen som har agurkmiks på bensinstasjonspølsa. Men alt endrer seg den dagen han og kompisen Robban prøver å hjelpe en eksentrisk magiker som kan ha satt fyr på en leilighet. Plutselig er de Norges mest ukvalifiserte men dyktige etterforskere, jaktet av en udødelig nazisekt og skapninger som har krøpet ut av lokalhistorien. Pentangelen er en mørk, blodig og hysterisk morsom reise inn i Vestfolds hemmelige underverden, der den største trusselen kanskje ikke er glemte guder eller zombie-nazister, men dine egne dårlige ideer.",
+      `<p class="font-serif text-lg text-fuchsia-300 font-bold mb-2">En mystisk kornsirkel på Nykirke blir starten på en absurd reise inn i Tønsbergs skjulte verden.</p>
+
+<p>Sankthansbålet nikter truende. Kumlokk stirrer tilbake. Og i kolonihagens parsell 53 skjuler det seg mer enn bare brukt agurkmiks. En gruppe tilsynelatende vanlige mennesker – ja, bortsett fra den selvtutnevnte taumaturgen Torleif og Benkan, som prøver å gjøre karriere som okkult eventyrer – dras ufrivillig inn i en virvel av eldgamle hemmeligheter, mørke krefter og urovekkende latter.</p>
+
+<p>Hva skjuler seg egentlig bak Pentangelen, og hvem trekker i trådene når byens hverdagsliv langsomt sklir ut i kaos?</p>
+
+<p>Med en lun kombinasjon av svart humor, grøss og glimt i øyet tar Pentangelen deg med på en fortelling hvor hverdagslige absurditeter og okkulte ritualer møtes i et uhellig, men uimotståelig kaos.</p>
+
+<p class="mt-2">Velkommen til Tønsberg.<br />Velkommen til galskapen.<br />Velkommen til Pentangelen.</p>
+
+<hr class="my-6 border-fuchsia-700/40" />
+
+<p class="font-serif text-lg text-fuchsia-300 font-bold mb-2">Bokhandelvennlig versjon:</p>
+
+<p>En kornsirkel på Nykirke. Et sankthansbål som stirrer tilbake. En by hvor selv kumlokkene skjuler hemmeligheter.</p>
+
+<p>Under Tønsbergs overflate lurer en verden av skjulte krefter, eldgamle ritualer – og en god dose ufrivillig latter. Her finner vi Torleif, selverklært taumaturg, og Benkan, en aspirerende okkult eventyrer. Sammen med en håndfull intetanende «vanlige folk» dras de inn i et kaos av mørke hemmeligheter, latter og eldgamle ritualer.</p>
+
+<p>Hva er egentlig Pentangelen, og hvem trekker i trådene når byen sakte, men sikkert, mister fotfestet i virkeligheten?</p>
+
+<p>Pentangelen er en absurd og satirisk fantasyroman – en miks av svart humor, grøss og glimt i øyet – hvor hverdagslige absurditeter møter det okkulte i et uhellig kaos.</p>
+
+<p class="mt-2">Velkommen til Tønsberg.<br />Velkommen til galskapen.<br />Velkommen til Pentangelen.</p>`,
     quotes: [
       { text: "Denne boka har ingen kjedelige øyeblikk.", author: "E.S." },
       { text: "En herlig parodi skrudd opp til elleve.", author: "H.E." },
@@ -528,7 +550,7 @@ function BookDetail({ book, setRoute }) {
         <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-3">
           <div className="space-y-4 md:col-span-2">
             <h3 className="text-lg font-serif font-semibold text-zinc-100">Om boken</h3>
-            <p className="text-zinc-300">{book.blurb}</p>
+            <div className="text-zinc-300" dangerouslySetInnerHTML={{ __html: book.blurb }} />
             <div className="flex flex-col gap-3 pt-1">
               <RetailerButtons title={book.title} author={book.author} />
               <div className="text-xs text-zinc-500">
