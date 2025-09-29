@@ -232,6 +232,7 @@ const BOOKS = [
       { icon: MapPin, label: "Sted", value: "Tønsbergs mørke side" },
       { icon: Ghost, label: "Antagonist", value: "En 105 år gammel nazist og inkarnat" },
       { icon: Shield, label: "Tema", value: "Skyld, vennskap, offer, agurkmiks" },
+      { icon: BookOpen, label: "Antall sider", value: "258" },
     ],
     author: "Torben Halvorsen Rygg",
   },
