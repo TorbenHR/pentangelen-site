@@ -1077,14 +1077,35 @@ export default function PentangelenSiteMock() {
           {route === PAGES.AUTHOR && (
             <div className="mx-auto max-w-5xl px-4 py-10">
               <Card className="p-6">
-                <h2 className="text-xl font-serif font-semibold text-zinc-100">Torben Halvorsen Rygg</h2>
-                <p className="text-zinc-400">
-                  Jeg heter Torben, bor i utkanten av Tønsberg, og har tilbrakt en foruroligende stor del av livet mitt med å se det absurde utfolde seg i statlige korridorer. </p>
-                  <p>Folk sier virkeligheten er rarere, dummere og mer uforutsigbar enn noen fiksjon du kan finne på.
-                  Så jeg bestemte meg for å ta den utfordringen.<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp; Bøkene mine er en slags kjærlig, men kaotisk, frontkollisjon mellom det jeg synes er genuint fascinerende – kosmisk horror, eldgamle myter, tidsparadokser – og det som er genuint tønsbergensisk: debatter om hvorvidt agurkmiks er en forbrytelse mot menneskeheten, mysteriet med bomringer, og den dypt rotfestede troen på at byens helter kan redde verden.
-                  Forvent raske dialoger, mysterier som er smartere enn de kanskje burde være, og en konstant påminnelse om at selv når himmelen revner og glemte guder kommer gjennom illusjonen, er det sannsynligvis noen i nærheten som er mer opptatt av om lompe egentlig er bedre enn pølsebrød.
-                  Det er i hvert fall noe av det jeg prøver på. Håper du elsker det.</p>
+                <h2 className="text-xl font-serif font-semibold text-zinc-100 mb-2">Torben Halvorsen Rygg</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                  <div className="md:col-span-2 space-y-4">
+                    <p className="text-zinc-400">
+                      Jeg heter Torben, bor i utkanten av Tønsberg, og har tilbrakt en foruroligende stor del av livet mitt med å se det absurde utfolde seg i statlige korridorer.
+                    </p>
+                    <p className="text-zinc-400">
+                      Folk sier virkeligheten er ofte rarere, dummere og mer uforutsigbar enn noen fiksjon du kan finne på. Så jeg bestemte meg for å ta den utfordringen.<br />
+                      &nbsp;&nbsp;&nbsp;&nbsp; Bøkene mine er en slags kjærlig, men kaotisk, frontkollisjon mellom det jeg synes er genuint fascinerende – kosmisk horror, eldgamle myter, tidsparadokser – og det som er genuint tønsbergensisk: debatter om hvorvidt agurkmiks er en forbrytelse mot menneskeheten, mysteriet med bomringer, og den dypt rotfestede troen på at byens helter kan redde verden.
+                      Forvent raske dialoger, mysterier som er smartere enn de kanskje burde være, og en konstant påminnelse om at selv når himmelen revner og glemte guder kommer gjennom illusjonen, er det sannsynligvis noen i nærheten som er mer opptatt av om lompe egentlig er bedre enn pølsebrød.
+                      Det er i hvert fall noe av det jeg prøver på. Håper du elsker det.
+                    </p>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-semibold text-zinc-300 mb-2">Metadata</h4>
+                    <div className="rounded-2xl border border-zinc-700 bg-zinc-800/60 px-4 py-3 text-zinc-200 flex items-center gap-2">
+                      <span className="font-semibold text-fuchsia-300">Sted:</span>
+                      <span>Vear, Tønsberg</span>
+                    </div>
+                    <div className="rounded-2xl border border-zinc-700 bg-zinc-800/60 px-4 py-3 text-zinc-200 flex items-center gap-2">
+                      <span className="font-semibold text-fuchsia-300">Født:</span>
+                      <span>1978</span>
+                    </div>
+                    <div className="rounded-2xl border border-zinc-700 bg-zinc-800/60 px-4 py-3 text-zinc-200 flex flex-col gap-1">
+                      <span className="font-semibold text-fuchsia-300">Inspirasjon:</span>
+                      <span>R. Rankin, T. Pratchett, D. Adams, K. Nærum</span>
+                    </div>
+                  </div>
+                </div>
               </Card>
             </div>
           )}
