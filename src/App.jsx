@@ -539,7 +539,7 @@ function BookDetail({ book, setRoute }) {
             <img
               src="/og-image.jpg"
               alt="Pentangelen omslagsbilde"
-              className="absolute inset-0 w-full h-full object-cover rounded-t-3xl"
+              className="absolute inset-0 w-full h-full object-cover rounded-t-3xl blur-md"
               style={{ zIndex: 1 }}
             />
             <div
