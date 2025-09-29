@@ -508,7 +508,23 @@ function BookDetail({ book, setRoute }) {
       </div>
 
       <Card>
-        <div className={`h-32 w-full rounded-t-3xl bg-gradient-to-br ${book.gradient}`} />
+        {/* For Pentangelen, use og-image.jpg as background with gradient overlay */}
+        {book.id === "pentangelen" ? (
+          <div className="h-32 w-full rounded-t-3xl relative overflow-hidden">
+            <img
+              src="/og-image.jpg"
+              alt="Pentangelen omslagsbilde"
+              className="absolute inset-0 w-full h-full object-cover rounded-t-3xl"
+              style={{ zIndex: 1 }}
+            />
+            <div
+              className={`absolute inset-0 w-full h-full rounded-t-3xl bg-gradient-to-br ${book.gradient}`}
+              style={{ opacity: 0.8, zIndex: 2 }}
+            />
+          </div>
+        ) : (
+          <div className={`h-32 w-full rounded-t-3xl bg-gradient-to-br ${book.gradient}`} />
+        )}
         <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-3">
           <div className="space-y-4 md:col-span-2">
             <h3 className="text-lg font-serif font-semibold text-zinc-100">Om boken</h3>
