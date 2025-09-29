@@ -478,7 +478,7 @@ function BooksGrid({ setRoute, setSelectedBook }) {
                   <Badge key={t}>{t}</Badge>
                 ))}
               </div>
-              <p className="line-clamp-3 text-zinc-300">{b.blurb}</p>
+              <p className="line-clamp-3 text-zinc-300">{typeof b.blurb === 'string' ? b.blurb.replace(/<[^>]+>/g, '') : b.blurb}</p>
               {b.quotes && b.quotes.length > 0 && (
                 <div className="space-y-2 pt-2">
                   {b.quotes.map((q, i) => (
