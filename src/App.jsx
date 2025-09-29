@@ -228,8 +228,8 @@ const BOOKS = [
 </p>
 
 <p>
-  Sankthansbålet nikter truende. Kumlokk stirrer tilbake. Og i kolonihagens parsell 53 skjuler det seg mer enn bare brukt agurkmiks. 
-  En gruppe tilsynelatende vanlige mennesker – ja, bortsett fra den selvtutnevnte taumaturgen Torleif og Benkan, som prøver å gjøre 
+  Sankthansbålet knitrer truende. Kumlokk stirrer tilbake. Og i kolonihagens parsell 53 skjuler det seg mer enn bare brukt agurkmiks. 
+  En gruppe tilsynelatende vanlige mennesker – ja, bortsett fra den selvtutnevnte taumaturgen Torleif og Bendik, som prøver å gjøre 
   karriere som okkult eventyrer – dras ufrivillig inn i en virvel av eldgamle hemmeligheter, mørke krefter og urovekkende latter.
 </p>
 
@@ -552,7 +552,16 @@ function BookDetail({ book, setRoute }) {
         <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-3">
           <div className="space-y-4 md:col-span-2">
             <h3 className="text-lg font-serif font-semibold text-zinc-100">Om boken</h3>
-            <div className="text-zinc-300" dangerouslySetInnerHTML={{ __html: book.blurb }} />
+            <div
+              className="text-zinc-300"
+              style={{}}
+              dangerouslySetInnerHTML={{ __html: book.blurb }}
+            />
+            <style>{`
+              .text-zinc-300 > p {
+                margin-bottom: 1.2em;
+              }
+            `}</style>
             <div className="flex flex-col gap-3 pt-1">
               <RetailerButtons title={book.title} author={book.author} />
               <div className="text-xs text-zinc-500">
