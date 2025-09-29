@@ -628,6 +628,18 @@ function LorePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <h2 className="mb-6 text-3xl font-bold text-zinc-100">Lore-kodeks</h2>
+      {/* Design-element: video med avrundede hjørner */}
+      <div className="flex justify-center mb-8">
+        <video
+          src="/Zombie_v1.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="rounded-3xl shadow-xl border border-zinc-800 w-full max-w-xl h-64 object-cover bg-black"
+          style={{ background: "#111" }}
+        />
+      </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {entries.map((e) => (
           <Card key={e.title} className="p-5">
