@@ -558,6 +558,25 @@ function BookDetail({ book, setRoute }) {
                       />
                     </div>
                   )}
+                  {/* Gratis nedlasting for Pentangelen under sidetall */}
+                  {book.id === "pentangelen" && label === "Antall sider" && (
+                    <div className="flex items-center gap-3 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-3 mt-2">
+                      <Wand2 size={16} className="text-fuchsia-400" />
+                      <div>
+                        <div className="text-xs text-zinc-400">Gratis nedlasting</div>
+                        <div className="text-sm text-zinc-200">
+                          <a
+                            href="/Pentangelen_FørsteKapittel.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline text-fuchsia-400 hover:text-fuchsia-300"
+                          >
+                            Første kapittel (PDF)
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </React.Fragment>
               ))}
               <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-3">
