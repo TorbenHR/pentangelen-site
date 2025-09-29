@@ -533,23 +533,19 @@ function BookDetail({ book, setRoute }) {
       </div>
 
       <Card>
-        {/* For Pentangelen, use og-image.jpg as background with gradient overlay */}
-        {book.id === "pentangelen" ? (
-          <div className="h-32 w-full rounded-t-3xl relative overflow-hidden">
-            <img
-              src="/og-image.jpg"
-              alt="Pentangelen omslagsbilde"
-              className="absolute inset-0 w-full h-full object-cover rounded-t-3xl blur-md"
-              style={{ zIndex: 1 }}
-            />
-            <div
-              className={`absolute inset-0 w-full h-full rounded-t-3xl bg-gradient-to-br ${book.gradient}`}
-              style={{ opacity: 0.8, zIndex: 2 }}
-            />
-          </div>
-        ) : (
-          <div className={`h-32 w-full rounded-t-3xl bg-gradient-to-br ${book.gradient}`} />
-        )}
+        {/* All books: blurry og-image.jpg with book's gradient overlay */}
+        <div className="h-32 w-full rounded-t-3xl relative overflow-hidden">
+          <img
+            src="/og-image.jpg"
+            alt="Bokheader-bilde, KI-manipulert Tønsberg"
+            className="absolute inset-0 w-full h-full object-cover rounded-t-3xl blur-md"
+            style={{ zIndex: 1, opacity: 0.85 }}
+          />
+          <div
+            className={`absolute inset-0 w-full h-full rounded-t-3xl bg-gradient-to-br ${book.gradient}`}
+            style={{ opacity: 0.8, zIndex: 2 }}
+          />
+        </div>
         <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-3">
           <div className="space-y-4 md:col-span-2">
             <h3 className="text-lg font-serif font-semibold text-zinc-100">Om boken</h3>
@@ -1084,7 +1080,7 @@ export default function PentangelenSiteMock() {
                 <h2 className="text-xl font-serif font-semibold text-zinc-100">Torben Halvorsen Rygg</h2>
                 <p className="text-zinc-400">
                   Jeg heter Torben, bor i utkanten av Tønsberg, og har tilbrakt en foruroligende stor del av livet mitt med å se det absurde utfolde seg i statlige korridorer. </p>
-                  <p>Folk sier virkeligheten er ofte rarere, dummere og mer uforutsigbar enn noen fiksjon du kan finne på.
+                  <p>Folk sier virkeligheten er rarere, dummere og mer uforutsigbar enn noen fiksjon du kan finne på.
                   Så jeg bestemte meg for å ta den utfordringen.<br />
                   &nbsp;&nbsp;&nbsp;&nbsp; Bøkene mine er en slags kjærlig, men kaotisk, frontkollisjon mellom det jeg synes er genuint fascinerende – kosmisk horror, eldgamle myter, tidsparadokser – og det som er genuint tønsbergensisk: debatter om hvorvidt agurkmiks er en forbrytelse mot menneskeheten, mysteriet med bomringer, og den dypt rotfestede troen på at byens helter kan redde verden.
                   Forvent raske dialoger, mysterier som er smartere enn de kanskje burde være, og en konstant påminnelse om at selv når himmelen revner og glemte guder kommer gjennom illusjonen, er det sannsynligvis noen i nærheten som er mer opptatt av om lompe egentlig er bedre enn pølsebrød.
