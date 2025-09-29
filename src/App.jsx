@@ -552,7 +552,7 @@ function BookDetail({ book, setRoute }) {
                     <div className="flex justify-center py-2">
                       <img
                         src="/Pentangelen_OF.jpg"
-                        alt="Pentangelen bokomslag"
+                        alt="Bilde av skummelt bygg i Tønsberg. Manipulert med KI."
                         className="w-64 h-40 object-cover rounded-2xl shadow"
                         style={{ maxWidth: "100%", height: "auto" }}
                       />
