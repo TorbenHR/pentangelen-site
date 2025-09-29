@@ -223,29 +223,31 @@ const BOOKS = [
     tags: ["okkult", "horror", "humor", "Vestfold"],
     gradient: "from-indigo-700/50 via-fuchsia-700/40 to-rose-700/40",
     blurb:
-      `<p class="font-serif text-lg text-fuchsia-300 font-bold mb-2">En mystisk kornsirkel på Nykirke blir starten på en absurd reise inn i Tønsbergs skjulte verden.</p>
+      `<p>
+  En mystisk kornsirkel på Nykirke blir starten på en absurd reise inn i Tønsbergs skjulte verden.
+</p>
 
-<p>Sankthansbålet nikter truende. Kumlokk stirrer tilbake. Og i kolonihagens parsell 53 skjuler det seg mer enn bare brukt agurkmiks. En gruppe tilsynelatende vanlige mennesker – ja, bortsett fra den selvtutnevnte taumaturgen Torleif og Benkan, som prøver å gjøre karriere som okkult eventyrer – dras ufrivillig inn i en virvel av eldgamle hemmeligheter, mørke krefter og urovekkende latter.</p>
+<p>
+  Sankthansbålet nikter truende. Kumlokk stirrer tilbake. Og i kolonihagens parsell 53 skjuler det seg mer enn bare brukt agurkmiks. 
+  En gruppe tilsynelatende vanlige mennesker – ja, bortsett fra den selvtutnevnte taumaturgen Torleif og Benkan, som prøver å gjøre 
+  karriere som okkult eventyrer – dras ufrivillig inn i en virvel av eldgamle hemmeligheter, mørke krefter og urovekkende latter.
+</p>
 
-<p>Hva skjuler seg egentlig bak Pentangelen, og hvem trekker i trådene når byens hverdagsliv langsomt sklir ut i kaos?</p>
+<p>
+  Hva skjuler seg egentlig bak Pentangelen, og hvem trekker i trådene når byens hverdagsliv langsomt sklir ut i kaos?
+</p>
 
-<p>Med en lun kombinasjon av svart humor, grøss og glimt i øyet tar Pentangelen deg med på en fortelling hvor hverdagslige absurditeter og okkulte ritualer møtes i et uhellig, men uimotståelig kaos.</p>
+<p>
+  Med en lun kombinasjon av svart humor, grøss og glimt i øyet tar <em>Pentangelen</em> deg med på en fortelling hvor 
+  hverdagslige absurditeter og okkulte ritualer møtes i et uhellig, men uimotståelig kaos.
+</p>
 
-<p class="mt-2">Velkommen til Tønsberg.<br />Velkommen til galskapen.<br />Velkommen til Pentangelen.</p>
-
-<hr class="my-6 border-fuchsia-700/40" />
-
-<p class="font-serif text-lg text-fuchsia-300 font-bold mb-2">Bokhandelvennlig versjon:</p>
-
-<p>En kornsirkel på Nykirke. Et sankthansbål som stirrer tilbake. En by hvor selv kumlokkene skjuler hemmeligheter.</p>
-
-<p>Under Tønsbergs overflate lurer en verden av skjulte krefter, eldgamle ritualer – og en god dose ufrivillig latter. Her finner vi Torleif, selverklært taumaturg, og Benkan, en aspirerende okkult eventyrer. Sammen med en håndfull intetanende «vanlige folk» dras de inn i et kaos av mørke hemmeligheter, latter og eldgamle ritualer.</p>
-
-<p>Hva er egentlig Pentangelen, og hvem trekker i trådene når byen sakte, men sikkert, mister fotfestet i virkeligheten?</p>
-
-<p>Pentangelen er en absurd og satirisk fantasyroman – en miks av svart humor, grøss og glimt i øyet – hvor hverdagslige absurditeter møter det okkulte i et uhellig kaos.</p>
-
-<p class="mt-2">Velkommen til Tønsberg.<br />Velkommen til galskapen.<br />Velkommen til Pentangelen.</p>`,
+<div style="text-align: center; margin-top: 1.5em;">
+  <p>Velkommen til Tønsberg.</p>
+  <p>Velkommen til galskapen.</p>
+  <p><strong>Velkommen til Pentangelen.</strong></p>
+</div>
+`,
     quotes: [
       { text: "Denne boka har ingen kjedelige øyeblikk.", author: "E.S." },
       { text: "En herlig parodi skrudd opp til elleve.", author: "H.E." },
