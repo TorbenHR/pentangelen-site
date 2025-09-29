@@ -535,17 +535,29 @@ function BookDetail({ book, setRoute }) {
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-zinc-300">Metadata</h4>
             <div className="grid grid-cols-1 gap-3">
-              {book.details.map(({ icon: Icon, label, value }) => (
-                <div
-                  key={label}
-                  className="flex items-center gap-3 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-3"
-                >
-                  <Icon size={16} className="text-zinc-400" />
-                  <div>
-                    <div className="text-xs text-zinc-400">{label}</div>
-                    <div className="text-sm text-zinc-200">{value}</div>
+              {book.details.map(({ icon: Icon, label, value }, idx) => (
+                <React.Fragment key={label}>
+                  <div
+                    className="flex items-center gap-3 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-3"
+                  >
+                    <Icon size={16} className="text-zinc-400" />
+                    <div>
+                      <div className="text-xs text-zinc-400">{label}</div>
+                      <div className="text-sm text-zinc-200">{value}</div>
+                    </div>
                   </div>
-                </div>
+                  {/* Legg til bilde under tema for Pentangelen */}
+                  {book.id === "pentangelen" && label === "Tema" && (
+                    <div className="flex justify-center py-2">
+                      <img
+                        src="/Pentangelen_OF.jpg"
+                        alt="Pentangelen bokomslag"
+                        className="w-64 h-40 object-cover rounded-2xl shadow"
+                        style={{ maxWidth: "100%", height: "auto" }}
+                      />
+                    </div>
+                  )}
+                </React.Fragment>
               ))}
               <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-3">
                 <div className="text-xs text-zinc-400">Status</div>
